@@ -1,0 +1,67 @@
+.formField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -12px;
+}
+.formField > input,
+.ant-select {
+  width: 200px !important;
+  border: 1px solid rgb(176, 176, 243);
+  border-radius: 5px;
+  padding: 10px;
+  height: 20px;
+  margin-right: 15px;
+}
+.formField > span > input {
+  width: 200px !important;
+  border: 1px solid rgb(176, 176, 243);
+  border-radius: 5px;
+  padding: 10px;
+  height: 20px;
+}
+.ant-input-affix-wrapper-focused > input {
+  border: 2px solid red !important;
+}
+div > .ant-checkbox-wrapper {
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.formField > div {
+  display: flex;
+  flex-direction: column;
+}
+.cardX {
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  width: fit-content;
+  padding: 20px;
+  position: absolute;
+  margin-top: 10vh;
+}
+.cardX > .ant-card-body {
+  display: flex;
+}
+.loginBtn {
+  background-color: rgb(137, 137, 235);
+  padding: 10px;
+  border: 0 transparent;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100px;
+  cursor: pointer;
+}
+.ant-form-item-explain-error > div {
+  color: red !important;
+  margin-left: 120px;
+  font-size: 14px;
+}

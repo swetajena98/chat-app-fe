@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./components/layout/navbar";
+import ChatRoom from "./views/chatRoom";
+import HomePage from "./views/homePage";
+import LoginForm from "./views/loginForm";
+import RegisterForm from "./views/registrationForm";
+import AuthContext, { AuthContextProvider } from "./context/AuthContext";
 
-function App() {
+const App: React.FC = () => {
+  const { isLoggedIn, getLoggedIn, userDetails } = useContext(AuthContext);
+  console.log(isLoggedIn);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContextProvider>
+      <Router>
+        <NavBar></NavBar>
+        <Switch>
+          {isLoggedIn === true && (
+            <Route exact path="/chatroom">
+              <ChatRoom />
+            </Route>
+          )}
+
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          {isLoggedIn === false && (
+            <>
+              <Route exact path="/register">
+                <RegisterForm></RegisterForm>
+              </Route>
+              <Route exact path="/login">
+                <LoginForm></LoginForm>
+              </Route>
+            </>
+          )}
+        </Switch>
+      </Router>
+    </AuthContextProvider>
   );
-}
+};
 
 export default App;

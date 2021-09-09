@@ -1,0 +1,15 @@
+.navigationBar {
+  background-color: rgb(137, 137, 235);
+  padding: 35px;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.linkText {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: cursive;
+}
