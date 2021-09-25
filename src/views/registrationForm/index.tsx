@@ -116,9 +116,9 @@ const RegisterForm: React.FC = () => {
               </div>
             </Form.Item>
             <br /> <br />
-            <Button htmlType="submit" type="primary" className="registerBtn">
+            <button type="submit" className="registerBtn">
               Register
-            </Button>
+            </button>
           </Form>
         </div>
       </Card>

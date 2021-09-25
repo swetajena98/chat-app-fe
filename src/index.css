@@ -1,8 +1,13 @@
+@import "antd/dist/antd.css";
+input {
+  outline-width: 0;
+  border: 0rem solid transparent;
+}
 body {
   margin: 0;
-  font-family: cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: raleway;
 }
 
 code {
@@ -11,8 +16,6 @@ code {
 }
 .user-detail-avatar {
   background-color: rgb(168, 168, 228);
-  border-radius: 50%;
-  padding: 10px;
 }
 .user-detail-avatar:hover {
   cursor: pointer;
@@ -25,19 +28,18 @@ code {
   border-radius: 5px;
   width: fit-content;
   margin-left: auto !important;
-  font-family: cursive;
 }
 .signout-btn {
   background-color: rgb(168, 168, 228) !important;
-  padding: 15px;
-  border: 0 transparent;
-  outline: none;
-  border-radius: 5px;
-  color: white !important;
-  font-weight: 600;
-  font-size: 16px;
-  width: 150px;
-  cursor: pointer;
+  padding: 15px !important;
+  border: 0 transparent !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  color: white !important ;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  width: 150px !important;
+  cursor: pointer !important;
 }
 .ant-popover {
   pointer-events: visible !important;
@@ -50,4 +52,78 @@ code {
   height: 20px;
   border-radius: 50%;
   background-color: blueviolet;
+}
+.formField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -12px;
+}
+.formField > input,
+.ant-select {
+  width: 200px !important;
+  border: 1px solid rgb(176, 176, 243) !important;
+  border-radius: 5px !important;
+  padding: 20px !important;
+  height: 20px !important;
+  margin-right: 15px !important;
+}
+.formField > span > input {
+  width: 200px !important;
+  border: 1px solid rgb(176, 176, 243) !important;
+  border-radius: 5px !important;
+  padding: 20px !important;
+  height: 20px !important;
+}
+.ant-form-item-explain-error > div {
+  margin-top: 1rem !important;
+}
+.ant-input-affix-wrapper-focused > input {
+  border: 2px solid red !important;
+}
+.formField > .ant-input-affix-wrapper {
+  all: unset;
+  display: inline-flex;
+}
+div > .ant-checkbox-wrapper {
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.formField > div {
+  display: flex;
+  flex-direction: column;
+}
+.cardX {
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  width: fit-content;
+  padding: 40px;
+  position: absolute;
+  margin-top: 10vh;
+}
+.cardX > .ant-card-body {
+  display: flex;
+}
+.registerBtn {
+  background-color: rgb(137, 137, 235) !important;
+  padding: 15px !important;
+  border: 0 transparent !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  width: 150px !important;
+  cursor: pointer !important;
+}
+.ant-form-item-explain-error > div {
+  color: red !important;
+  margin-left: 120px;
+  font-size: 14px;
 }

@@ -1,35 +1,268 @@
-.App {
-  text-align: center;
+@import "~antd/dist/antd.css";
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+@font-face {
+  font-family: "Robotolight";
+  src: url("fonts/Roboto-Light-webfont.eot");
+  src: url("fonts/Roboto-light-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Roboto-light-webfont.woff2") format("woff2"),
+    url("fonts/Roboto-light-webfont.woff") format("woff"),
+    url("fonts/Roboto-light-webfont.ttf") format("truetype"),
+    url("fonts/Roboto-light-webfont.svg#Robotolight") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Robotomedium";
+  src: url("fonts/Roboto-medium-webfont.eot");
+  src: url("fonts/Roboto-medium-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Roboto-medium-webfont.woff2") format("woff2"),
+    url("fonts/Roboto-medium-webfont.woff") format("woff"),
+    url("fonts/Roboto-medium-webfont.ttf") format("truetype"),
+    url("fonts/Roboto-medium-webfont.svg#Robotomedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Robot";
+  src: url("fonts/Roboto-regular-webfont.eot");
+  src: url("fonts/Roboto-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/Roboto-regular-webfont.woff2") format("woff2"),
+    url("fonts/Roboto-regular-webfont.woff") format("woff"),
+    url("fonts/Roboto-regular-webfont.ttf") format("truetype"),
+    url("fonts/Roboto-regular-webfont.svg#Robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+li,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+:focus {
+  outline: 0;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
 body {
-  font-family: cursive !important;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: raleway;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/******************************   CUSTOM STYLES  ***********************************************/
+
+h1 {
+  display: block;
+  font-size: 2rem;
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h2 {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0.83rem;
+  margin-bottom: 0.83rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h3 {
+  display: block;
+  font-size: 1.17rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h4 {
+  display: block;
+  margin-top: 1.33rem;
+  margin-bottom: 1.33rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h5 {
+  display: block;
+  font-size: 0.83rem;
+  margin-top: 1.67rem;
+  margin-bottom: 1.67rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h6 {
+  display: block;
+  font-size: 0.67rem;
+  margin-top: 2.33rem;
+  margin-bottom: 2.33rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right !important;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.tm-modal-header {
+  padding: 20px 24px !important;
+}
+.arn-input-field:before {
+  content: "ARN-";
+  font-size: 20px;
+}
+.fileWH .ant-upload-list-item {
+  width: 50vh;
+  height: 50vh;
+}
+.fileWH .ant-upload-list-item-thumbnail {
+  width: 87%;
+  height: 87%;
+}
+.fileWH .ant-upload-list-item-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.custom-success-button {
+  background-color: #00a465;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+}
+
+.custom-success-button:hover {
+  background-color: #00a465;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-success-button:focus {
+  background-color: #00a465;
+  color: white;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

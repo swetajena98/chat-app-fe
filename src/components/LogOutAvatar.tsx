@@ -1,10 +1,9 @@
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Button, Popover, Row } from "antd";
 import React, { useContext } from "react";
-import "../index.css";
 import { useHistory } from "react-router";
 import axios from "axios";
-// import "antd/dist/antd.css";
+import "../index.css";
 import AuthContext from "../context/AuthContext";
 interface logOutProps {
   userName: any;

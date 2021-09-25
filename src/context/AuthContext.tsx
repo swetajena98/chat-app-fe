@@ -6,6 +6,8 @@ const AuthContext: any = createContext(true);
 const AuthContextProvider: React.FC = (props: any) => {
   const [isLoggedIn, setIsloggedIn] = useState<any>();
   const [userDetails, setUserDetails] = useState<any>();
+  const [userInfo, setUserInfo] = useState<any>();
+
   const getLoggedIn = async () => {
     const result = await axios.get(
       "http://localhost:8571/auth/isLoggedIn",
@@ -21,7 +23,9 @@ const AuthContextProvider: React.FC = (props: any) => {
     getLoggedIn();
   }, []);
   return (
-    <AuthContext.Provider value={{ isLoggedIn, getLoggedIn, userDetails }}>
+    <AuthContext.Provider
+      value={{ isLoggedIn, getLoggedIn, userDetails, userInfo, setUserInfo }}
+    >
       {props.children}
     </AuthContext.Provider>
   );

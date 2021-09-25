@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import { Alert, Button, Card, Divider, Form, Input, Typography } from "antd";
-import "./index.css";
+import "../../index.css";
 import login from "../../images/3071357.jpg";
 
 const LoginForm: React.FC = () => {
