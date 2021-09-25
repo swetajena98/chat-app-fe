@@ -8,18 +8,16 @@ import {
 } from "@material-ui/icons";
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
+import { apiURL } from "../../constants";
 import "./index.css";
 import SidebarChat from "./sidebarChat";
 
 const SideBar = () => {
   const [res, setRes] = useState<any>();
   const getUsers = async () => {
-    const result = await axios.get(
-      "http://localhost:8571/auth/getAllUsersData",
-      {
-        withCredentials: true,
-      }
-    );
+    const result = await axios.get(apiURL + "/auth/getAllUsersData", {
+      withCredentials: true,
+    });
     result && setRes(result.data);
   };
   useEffect(() => {

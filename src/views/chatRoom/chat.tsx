@@ -4,6 +4,7 @@ import "./index.css";
 import AuthContext from "../../context/AuthContext";
 import axios from "axios";
 import Pusher from "pusher-js";
+import { apiURL } from "../../constants";
 
 const Chat = () => {
   const { userDetails } = useContext(AuthContext);
@@ -16,7 +17,7 @@ const Chat = () => {
   const getConvo = async () => {
     await axios
       .get(
-        "http://localhost:8571/conversation",
+        apiURL + "/conversation",
 
         {
           params: { email: userInfo.email },
@@ -44,7 +45,7 @@ const Chat = () => {
   // )
   const sendMessage = async () => {
     const result = await axios.post(
-      "http://localhost:8571/message",
+      apiURL + "/message",
       { message: message, conversationId: id },
       {
         withCredentials: true,
@@ -54,7 +55,7 @@ const Chat = () => {
   };
   const getMessages = async (idd: any) => {
     await axios
-      .get("http://localhost:8571/message", {
+      .get(apiURL + "/message", {
         params: { id: idd },
         withCredentials: true,
       })

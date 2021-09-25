@@ -5,6 +5,8 @@ import AuthContext from "../../context/AuthContext";
 import { Button, Card, Divider, Form, Input, Typography } from "antd";
 import "./index.css";
 import logo from "../../images/20945760.jpg";
+import { apiURL } from "../../constants";
+
 const RegisterForm: React.FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -23,7 +25,7 @@ const RegisterForm: React.FC = () => {
         passwordVerify,
       };
 
-      await axios.post("http://localhost:8571/auth/", registerData, {
+      await axios.post(apiURL + "/auth/", registerData, {
         withCredentials: true,
       });
 

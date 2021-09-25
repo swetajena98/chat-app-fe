@@ -5,6 +5,8 @@ import { useHistory } from "react-router";
 import axios from "axios";
 import "../index.css";
 import AuthContext from "../context/AuthContext";
+import { apiURL } from "../constants";
+
 interface logOutProps {
   userName: any;
   userEmail: any;
@@ -15,7 +17,7 @@ const LogOutAvatar: React.FC<logOutProps> = (props) => {
   const history = useHistory();
   const { getLoggedIn } = useContext(AuthContext);
   const logoutUser = async () => {
-    await axios.get("http://localhost:8571/auth/logout", {
+    await axios.get(apiURL + "/auth/logout", {
       withCredentials: true,
     });
     await getLoggedIn();

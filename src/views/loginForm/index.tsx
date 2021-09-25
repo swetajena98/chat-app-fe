@@ -5,6 +5,7 @@ import AuthContext from "../../context/AuthContext";
 import { Alert, Button, Card, Divider, Form, Input, Typography } from "antd";
 import "../../index.css";
 import login from "../../images/3071357.jpg";
+import { apiURL } from "../../constants";
 
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -21,13 +22,9 @@ const LoginForm: React.FC = () => {
         password,
       };
 
-      const result = await axios.post(
-        "http://localhost:8571/auth/login",
-        loginData,
-        {
-          withCredentials: true,
-        }
-      );
+      const result = await axios.post(apiURL + "/auth/login", loginData, {
+        withCredentials: true,
+      });
       console.log(result);
       await getLoggedIn();
       history.push("/");
